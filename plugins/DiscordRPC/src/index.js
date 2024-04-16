@@ -42,6 +42,7 @@ client.then(() => {
         state: formatLongString(
           "by " + currentlyPlaying.artists.map((a) => a.name).join(", ")
         ),
+        type: 2,
         largeImageKey: mediaURL,
         // Discord requires largeImageText to be at least 2 characters long. So we add a invisible space to the end of the string if it's only 1 character long.
         largeImageText: largeImageTextContent.length >= 2 ? formatLongString(largeImageTextContent) : (largeImageTextContent + "‎"),
